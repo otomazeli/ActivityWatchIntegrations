@@ -1,0 +1,23 @@
+{
+  "name": "ActivityWatch Integrations",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",  // Use Python 3.10 base image
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.10"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "GitHub.codespaces"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install gitpython flask requests cryptography",
+  "remoteUser": "vscode"
+}
